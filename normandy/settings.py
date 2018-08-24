@@ -35,6 +35,7 @@ class Core(Configuration):
         "django.contrib.messages",
         "whitenoise.runserver_nostatic",
         "django.contrib.staticfiles",
+        "django.contrib.postgres",
     ]
 
     # Middleware that ALL environments must have. See the Base class for

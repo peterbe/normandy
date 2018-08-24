@@ -84,7 +84,7 @@ class RecipeViewSet(CachingViewsetMixin, UpdateOrCreateModelViewSet):
             query = Q()
             for token in tokens:
                 query &= (
-                    Q(latest_revision__name__icontains=token)
+                    Q(latest_revision__name__search=token)
                     | Q(latest_revision__extra_filter_expression__icontains=token)
                     | Q(latest_revision__arguments_json__icontains=token)
                 )
